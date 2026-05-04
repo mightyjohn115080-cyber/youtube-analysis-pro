@@ -1,51 +1,34 @@
-// YouTube Analysis Pro - Viral AI System
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Analysis Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body { font-family: Arial; background: #0f172a; color: white; padding: 20px; }
+    input, button { padding: 10px; margin-top: 10px; width: 100%; }
+    .card { background: #1e293b; padding: 15px; margin-top: 10px; border-radius: 10px; }
+  </style>
+</head>
+<body>
 
-// Viral Core Engine
-function viralCoreEngine(data) {
-    // Core logic for analyzing viral content
-    return data.map(item => ({ title: analyzeTitle(item.title), hook: generateHook(item.hook) }));
+<h1>YouTube Analysis Pro 🚀</h1>
+
+<input id="topic" placeholder="Enter topic..." />
+<button onclick="generate()">Generate Content</button>
+
+<div id="output"></div>
+
+<script>
+function generate() {
+  const topic = document.getElementById('topic').value;
+
+  document.getElementById('output').innerHTML = `
+    <div class='card'><b>Title:</b> ${topic} Strategy That Works</div>
+    <div class='card'><b>Hook:</b> Stop scrolling, this ${topic} method is powerful...</div>
+    <div class='card'><b>Script:</b> Today we talk about ${topic} and how you can grow fast...</div>
+  `;
 }
+</script>
 
-// Title Analyzer
-function analyzeTitle(title) {
-    // Analysis logic for titles
-    return title.length > 60 ? title.substring(0, 57) + '...' : title;
-}
-
-// Hook Generator
-function generateHook(hook) {
-    // Logic to generate engaging hooks
-    return `Did you know? ${hook}`;
-}
-
-// Viral Idea Generator
-function generateViralIdea() {
-    // Logic for generating viral ideas
-    const ideas = ['Unique challenges', 'Life hacks', 'Mind-blowing facts'];
-    return ideas[Math.floor(Math.random() * ideas.length)];
-}
-
-// Dashboard Component
-class Dashboard extends React.Component {
-    render() {
-        return <div><h1>Dashboard</h1></div>;
-    }
-}
-
-// Auto Content Generator
-function autoContentGenerator() {
-    // Content generation logic
-    return 'Automatically generated content';
-}
-
-// Pro Script Generator
-function proScriptGenerator(topic) {
-    return `This is a professional script about ${topic}`;
-}
-
-// Example usage
-const sampleData = [
-    { title: 'How to go viral on YouTube', hook: 'This is the best thing ever!' },
-];
-console.log(viralCoreEngine(sampleData));
-console.log(proScriptGenerator('YouTube Strategies'));
+</body>
+</html>
